@@ -8,6 +8,11 @@
  *
  * NB: all code you write this year should use strict mode, so
  * we've enabled that by default with the first line of code.
+ * 
+ * Technique for writing code that passes our unit tests...
+ * When you start to code a function, if you have an explanation of what it should do, paste that into your programme as a comment, so you have something to refer back to.
+ * Then create the empty function with a code block, and in the code block write comments for each step of what you think needs to be done.
+ * Then write the code that makes each comment happen.
  */
 
 'use strict';
@@ -21,7 +26,7 @@ function fn() {
 }
 
 function sn() {
-  return 'Edwards';
+  return 'Harris';
 }
 
 function example() {
@@ -49,5 +54,18 @@ function subtract (a, b){
 
 
 function checkObject (obj){
-  // I need to set obj property named checked to true
+  obj.checked = true;
+}
+
+// Create a `checkObjectInside` function that accepts an object called `obj` as a parameter and if that object has an object value in its `data` property, it sets *that* inner object's property `checked` to `true`.
+
+function checkObjectInside (obj){
+  /* 
+   * Does the object have an object value in its data property?
+   * If there is an object value in its data property set the inner objects checked property to true.
+   * 
+  */
+ if (obj.data.value = checked){
+   obj.data.value.checked = true;
+ }
 }
