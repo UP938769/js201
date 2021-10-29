@@ -65,7 +65,11 @@ function checkObjectInside (obj){
    * If there is an object value in its data property set the inner objects checked property to true.
    * 
   */
- if (obj.data.value = checked){
-   obj.data.value.checked = true;
+ if (obj && obj.data){
+   obj.data.checked = true;
  }
+}
+
+function arraySet(arr, i, n){
+  
 }
