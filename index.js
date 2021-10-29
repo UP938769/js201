@@ -80,8 +80,8 @@ function checkObjectInside (obj){
  * i = index
  * n = value
  * 
- * Place n into the array. i will tell you where to place it
- * n will only go into the array if the index given is already a location in the array.
+ * Place "n" into the array. "i" will tell you where to place it
+ * "n" will only go into the array if the index given is already a location in the array.
  * Don't need to return anything as the array is modified directly.
 */
 
