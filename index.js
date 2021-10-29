@@ -59,16 +59,31 @@ function checkObject (obj){
 
 // Create a `checkObjectInside` function that accepts an object called `obj` as a parameter and if that object has an object value in its `data` property, it sets *that* inner object's property `checked` to `true`.
 
+/* 
+ * Does the object have an object value in its data property?
+ * If there is an object value in its data property set the inner objects checked property to true.
+ * 
+*/
+
 function checkObjectInside (obj){
-  /* 
-   * Does the object have an object value in its data property?
-   * If there is an object value in its data property set the inner objects checked property to true.
-   * 
-  */
- if (obj && obj.data){
+ if (obj && obj.data){ // In short this line makes sure that obk *AND* obk.data both exist. If they don't *BOTH* exist then it will return false and stops there. If *BOTH* do exist then it makes the checked value of obj.data true.
    obj.data.checked = true;
  }
 }
+
+
+// Create an arraySet function that accepts three parameters `arr`, `i` and `n`. The first one is an array and the second one an index. The function should place the value of the third parameter into the array at an index specified by the second parameter, if (and only if) such an index is already in the array. Note that your function does not need to return a value because the array is modified directly. 
+
+/*
+ * 3 parameters; arr, i, n
+ * arr = array
+ * i = index
+ * n = value
+ * 
+ * Place n into the array. i will tell you where to place it
+ * n will only go into the array if the index given is already a location in the array.
+ * Don't need to return anything as the array is modified directly.
+*/
 
 function arraySet(arr, i, n){
   
