@@ -86,14 +86,23 @@ function checkObjectInside (obj){
 */
 
 function arraySet(arr, i, n){
-  if (i == typeof number){
-    if (i !== -1 && i !== 3){
+  if (Number.isInteger(i)){
+    if (i >= 0 && i < arr.length){
       arr[i] = n;
     }
-  } else {
-    // if (i !== -1 && i !== 3){
-    //   arr[i] = n;
-    // }
-    return;
-  } 
+  } // how to check for an integer in js
+}
+
+/*
+ * Create a function `addAll` that accepts an array `arr` as a single parameter. 
+ * Assuming an array of numbers is passed, return the result of adding all those numbers.
+ * 
+ * 
+ * Single parameter called 'arr'
+ * 'arr' contains an array of numbers
+ * Add all of the numbers in the array and return the result.
+*/
+
+function addAll(arr){
+  
 }
