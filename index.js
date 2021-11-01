@@ -86,8 +86,14 @@ function checkObjectInside (obj){
 */
 
 function arraySet(arr, i, n){
-  let num = arr(i);
-  if (num == true){
-    arr(i) = n;
-  }
+  if (i == typeof number){
+    if (i !== -1 && i !== 3){
+      arr[i] = n;
+    }
+  } else {
+    // if (i !== -1 && i !== 3){
+    //   arr[i] = n;
+    // }
+    return;
+  } 
 }
