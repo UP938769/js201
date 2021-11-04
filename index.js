@@ -66,7 +66,7 @@ function checkObject (obj){
 */
 
 function checkObjectInside (obj){
- if (obj && obj.data){ // In short this line makes sure that obk *AND* obk.data both exist. If they don't *BOTH* exist then it will return false and stops there. If *BOTH* do exist then it makes the checked value of obj.data true.
+ if (obj && obj.data){ // In short this line makes sure that obj *AND* obj.data both exist. If they don't *BOTH* exist then it will return false and stops there. If *BOTH* do exist then it makes the checked value of obj.data true.
    obj.data.checked = true;
  }
 }
@@ -90,7 +90,7 @@ function arraySet(arr, i, n){
     if (i >= 0 && i < arr.length){
       arr[i] = n;
     }
-  } // how to check for an integer in js
+  } 
 }
 
 /*
@@ -104,5 +104,72 @@ function arraySet(arr, i, n){
 */
 
 function addAll(arr){
+  
+  const add = (previousValue, currentValue) => previousValue + currentValue; // This creates a binding that will take the previous and current values and add them together
+  return arr.reduce(add); // This returns the array with the .reduce method. The previous binding is used as a parameter. .reduce is a callback function that runs on each element in an array. Because of the parameter, it add the current value in the array to the previous value of the array and then keeps the sum of both as the previous value. 
+}
+
+/*
+ * Create a function called `larger` that accepts two numbers "a" and "b" and returns the larger.
+ */
+function larger(a, b){
+  if (a > b){
+    return a;
+  } else {
+    return b;
+  }
+}
+
+/*
+ * Create a function called "largest" that accepts an array "arr" of numbers and returns the largest number in the array.
+ * 
+ * arr = array of numbers
+ * 
+ * Return the largest number in the array
+ */
+function largest(arr){
+  let largest = null;
+
+  for (let i = 0; i < arr.length; i++){ // For loop that loops for as long as the length of the array
+    if (arr[i] > largest){ // Compares the current value in the array to the variable set up before hand.
+      largest = arr[i]; // Gives the current value in the array to the variable as it is bigger than the previous value that the variable held.
+    }
+  }
+  return largest;
+}
+
+/*
+ * Create a function called compare that accepts two arrays of numbers ("a" and "b") and compares the contents. It should return true of the arrays are identical and false otherwise.
+ * 
+ * Compare 2 arrays
+ * See if they are identical or not
+ */
+function compare(a, b){
+  let answer = true;
+
+  if (a.length === b.length){ // Compares the lengths of both arrays
+    for (let i = 0; i < a.length; i++){ //Loops as many times as there are values in array "a".
+      if (a[i] === b[i]){ // If the current value in both arrays is the same return true; else return false.
+        answer = true;
+      } else {
+        return false;
+      }
+    }
+  } else {
+    return false;
+  }
+  return answer;
+}
+
+/*
+ * Create a function "addToAll" that accepts an array "arr" and a number "n" as parameters. Assuming an array of numbers is passed, return the same array with the second parameter added to each number within the array - such that ([1, 2, 3], 1) should return [2, 3, 4].
+ *
+ * arr = array
+ * n = number
+ * 
+ * Add "n" to each number in the array
+ */
+
+function addToAll(arr, n){
   
 }
