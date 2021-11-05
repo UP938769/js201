@@ -168,8 +168,33 @@ function compare(a, b){
  * n = number
  * 
  * Add "n" to each number in the array
+ * 
+ * Need to loop through the array and add n to each number in the array.
+ * 
+ * get element from array
+ * add n to the element
+ * replace element in the array
  */
 
 function addToAll(arr, n){
-  
+  // let newNum = 0;
+
+  for (let i = 0; i < arr.length; i++){
+    arr[i] = arr[i] + n;
+  }
+  return arr;
+}
+
+/* Create a function `rememberThis` with one parameter `keepsake` which should be stored in a global variable called 'remembered' (which you need to declare). Each subsequent call to rememberThis should overwrite the value of 'remembered'.
+ *
+ * 
+ * parameter = keepsake
+ * keepsake stored in global variable 'remembered'
+ * Overwrite 'remembered' each time the function is called
+ */
+
+function rememberThis (keepsake){
+  let remembered = keepsake;
+
+  rememberThis(remembered);
 }
