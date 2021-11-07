@@ -192,9 +192,44 @@ function addToAll(arr, n){
  * keepsake stored in global variable 'remembered'
  * Overwrite 'remembered' each time the function is called
  */
+let remembered;
 
 function rememberThis (keepsake){
-  let remembered = keepsake;
+  remembered = keepsake;
+}
 
-  rememberThis(remembered);
+/* Write a function `nArray` that takes a parameter `n` and returns an array with `n` numbers. The numbers in the array should increase from 1 to `n`.
+ * 
+ * Return an array with 'n' amount of numbers
+ * n is a number that is given
+ * The array should increase from 1 to the number that is currently n
+ * 
+ * Create a loop to add a number to the end of an array
+ * Make it loop n amount of times
+ */
+function nArray (n){
+  let arr = [];
+  for (let i = 1; i <= n; i++){
+    arr.push(i);
+  }
+  return arr;
+}
+
+/* Create a function `addAllOpt` that sums an array (`arr`). If the array is not present or empty, return 0
+ * 
+ * parameter = arr
+ * 
+ * Add up all numbers in the array (and return?)
+ * If the array is not present or empty return 0
+ */
+
+function addAllOpt(arr){
+  if (arr != ''){
+    const add = (previousValue, currentValue) => previousValue + currentValue;
+    return arr.reduce(add);
+  } else if (arr == '') {
+    return 0;
+  } else {
+    return 0;
+  }
 }
