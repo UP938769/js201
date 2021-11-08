@@ -224,12 +224,56 @@ function nArray (n){
  */
 
 function addAllOpt(arr){
-  if (arr != ''){
-    const add = (previousValue, currentValue) => previousValue + currentValue;
-    return arr.reduce(add);
-  } else if (arr == '') {
+  if (arr == null){ // Checks to see if the array exists. If it doesn't it returns 0.
+    return 0;
+  } else if (arr.length == 0){ // Checks to see if the array is empty. If it is then return 0.
     return 0;
   } else {
-    return 0;
+    const add = (previousValue, currentValue) => previousValue + currentValue;
+    return arr.reduce(add);
   }
+}
+
+/*Write a function `divisors` that takes takes two parameters `arr` and `div`, an array of numbers and a divisor.  Return a new array containing only the numbers in the first array that are exactly divisible by the second parameter. 
+ * 
+ * 
+ * arr = array of numbers
+ * div = number to divide by
+ * 
+ * Return a new array.
+ * Must only contain numbers from arr that are exactly divisible by div.
+ * 
+ * Need to find index of numbers that are divisible by div
+ * Need to remove that and put it into new array
+ */
+
+function divisors (arr, div){
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++){
+    if ((arr[i]%div) == 0){
+      let temp = arr[i];
+      newArr.push(temp);
+      // console.log(arr[i]);
+    }
+  }
+  return newArr;
+}
+
+/* Write a function `multiples` that takes two parameters `n` and `m`.  It should return a new array of length `n`  where the numbers inserted increase from 1*m to n*m.
+ * 
+ * n = length
+ * m = number
+ * 
+ * Return a new array
+ * Numbers in new array increase from 1*m to n*m
+ * 
+ * 
+ */
+
+function multiples(n, m){
+  let newArr = [];
+  for (let i = 0; i < n; i++){
+    newArr[i] = (i+1)*m; // Takes the current index of newArr and adds 1 to it then multiplies it by m
+  }
+  return newArr;
 }
